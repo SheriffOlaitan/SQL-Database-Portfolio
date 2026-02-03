@@ -2,7 +2,6 @@
 == select command
 == to retrieve data from tables
 
-
 == Retrieve all columns from the customer table.
 select * 
 from customer
@@ -15,7 +14,6 @@ from film;
  select *
  from actor
  limit 15;
-
 
 == Retrieve all customers and sort them by last_name in ascending order.
 select *
@@ -35,30 +33,25 @@ select *
 from customer 
 order by first_name asc, last_name desc;
 
-
 == Retrieve all payments where the amount is greater than 5
 select *
 from payment
 where amount > 5;
-
 
 == Retrieve all payments where the amount is between 3.99 and 6.99
 select *
 from payment
 where amount between 3.99 and 6.99;
 
-
 == Retrieve all customers whose first_name starts with the letter J
 select *
 from customer 
 where first_name like '%J';
 
-
 == Retrieve all films where the description contains the word “Action”
 select *
 from film
 where description like '%Action%';
-
 
 == Retrieve payments greater than 7, sorted by amount in descending order
 select *
@@ -66,19 +59,16 @@ from payment
 where amount > 7
 order by amount desc;
 
-
 == Retrieve customers whose first name ends with “n”, sorted alphabetically
 select * 
 from customer 
 where first_name like 'n%'
 order by first_name asc;
 
-
 == Calculate the total amount spent by each customer
 select customer_id, sum(amount) as total_amount
 from payment
 group by customer_id;
-
 
 == Retrieve the average payment amount per customer
 select customer_id avg(amount) as average_amount
