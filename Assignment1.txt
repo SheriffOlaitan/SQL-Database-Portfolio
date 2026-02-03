@@ -25,7 +25,6 @@ select payment_id, customer_id, amount
 from payment
 order by amount asc;
 
-
 == Retrieve customers sorted by:
     - first_name in ascending order
     - last_name in descending order
